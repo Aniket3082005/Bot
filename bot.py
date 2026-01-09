@@ -1,7 +1,10 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 
-BOT_TOKEN = "7957102663:AAHPE7waIXIJAsy7vP10M3bkkpsn64aPDQk"
+import os
+
+BOT_TOKEN = os.getenv("7957102663:AAHPE7waIXIJAsy7vP10M3bkkpsn64aPDQk")
+REPLICATE_API_KEY = os.getenv("r8_cDM4rjC3glUyjl4lWyd9ELQSVMO3RFF399qzX")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
